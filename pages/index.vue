@@ -72,12 +72,17 @@
 </template>
 
 <script setup>
-import heroBackground from '~/assets/logo/hands_lg.jpg'
-import heroLogo from '~/assets/logo/logo.png'
-import blochowitzPhoto from '~/assets/teachers/blochowitz.png'
-import marquezPhoto from '~/assets/teachers/marquez.png'
-import preschoolPhoto from '~/assets/centers/preschool.png'
-import daycarePhoto from '~/assets/centers/daycare.png'
+const heroBackground = '/images/hands_lg.jpg'
+const heroLogo = '/images/logo.png'
+const blochowitzPhoto = '/images/teachers/blochowitz.png'
+const marquezPhoto = '/images/teachers/marquez.png'
+const preschoolPhoto = '/images/centers/preschool.png'
+const daycarePhoto = '/images/centers/daycare.png'
+
+const route = useRoute()
+const runtimeConfig = useRuntimeConfig()
+const siteUrl = runtimeConfig.public.siteUrl.replace(/\/$/, '')
+const canonicalUrl = `${siteUrl}${route.path === '/' ? '' : route.path}`
 
 const teachersData = [
   {
@@ -121,11 +126,19 @@ const centersData = [
   }
 ]
 
-// Set page metadata
+useSeoMeta({
+  title: 'South Platte Early Learning Programs | Preschool and Childcare',
+  description: 'South Platte Early Learning Programs provide preschool and childcare services to children in Deuel County, Keith County, and the surrounding area.',
+  ogTitle: 'South Platte Early Learning Programs',
+  ogDescription: 'Preschool and childcare services in Deuel County, Keith County, and surrounding communities.',
+  ogType: 'website',
+  ogUrl: canonicalUrl,
+  twitterCard: 'summary_large_image'
+})
+
 useHead({
-  title: 'Home - SPELP',
-  meta: [
-    { name: 'description', content: 'South Platte Early Learning Programs - Quality preschool and childcare services in Deuel and Keith counties.' }
+  link: [
+    { rel: 'canonical', href: canonicalUrl }
   ]
 })
 </script>
