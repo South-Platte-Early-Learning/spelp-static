@@ -16,11 +16,24 @@
 </template>
 
 <script setup>
-// Set page metadata
+const route = useRoute()
+const runtimeConfig = useRuntimeConfig()
+const siteUrl = runtimeConfig.public.siteUrl.replace(/\/$/, '')
+const canonicalUrl = `${siteUrl}${route.path}`
+
+useSeoMeta({
+  title: 'Events Calendar | South Platte Early Learning Programs',
+  description: 'View upcoming events and activities for South Platte Early Learning Programs.',
+  ogTitle: 'Events Calendar | South Platte Early Learning Programs',
+  ogDescription: 'Stay up to date with events and activities at South Platte Early Learning Programs.',
+  ogType: 'website',
+  ogUrl: canonicalUrl,
+  twitterCard: 'summary_large_image'
+})
+
 useHead({
-  title: 'Events - SPELP',
-  meta: [
-    { name: 'description', content: 'View upcoming events and activities at South Platte Early Learning Programs.' }
+  link: [
+    { rel: 'canonical', href: canonicalUrl }
   ]
 })
 </script>
