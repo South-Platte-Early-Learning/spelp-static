@@ -1,17 +1,16 @@
 # SPELP - South Platte Early Learning Programs
 
-A static website built with Nuxt.js showcasing preschool and childcare services.
+A website for South Platte Early Learning Programs, serving preschool and childcare services to children in Deuel County, Keith County, and the surrounding area.
 
 ## Features
 
-- **Static Generation**: Fast loading static website
-- **Contact Form**: Serverless contact form with email notifications
 - **Responsive Design**: Mobile-friendly layout with Tailwind CSS
-- **Public Pages**:
-  - Home page with program overview
-  - Teachers page with staff biographies
-  - Centers page with service details
-  - Events page with Google Calendar integration
+- **Home Page** with sections for:
+  - Program overview and mission
+  - Staff biographies (Jennifer Blochowitz & Kelsey Marquez)
+  - Services (Preschool and Childcare programs)
+  - Contact information (email and Facebook)
+- **Events Page**: Embedded Google Calendar with upcoming events and activities
 
 ## Development
 
@@ -46,46 +45,33 @@ npm run build
 npm run generate
 ```
 
-## Contact Form Setup
-
-To enable the contact form email functionality, set these environment variables:
-
-```bash
-# SMTP Configuration (recommended)
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_USER=your-email@gmail.com
-SMTP_PASS=your-app-password
-SMTP_FROM=no-reply@spelp.org
-
-# Email Recipients
-CONTACT_EMAIL_1=admin1@spelp.org
-CONTACT_EMAIL_2=admin2@spelp.org
-```
-
 ## Deployment
 
 This site is optimized for deployment on Vercel:
 
 1. Connect your repository to Vercel
-2. Configure environment variables in Vercel dashboard
-3. Deploy automatically on push to main branch
+2. Deploy automatically on push to main branch
 
 ## Project Structure
 
 ```
 ├── pages/           # Nuxt.js pages (auto-routing)
+│   ├── index.vue    # Home page (about, teachers, services, contact)
+│   └── events.vue   # Events calendar page
 ├── components/      # Vue components
-├── server/api/      # Serverless API routes
-├── assets/css/      # Global styles
+│   └── AboutTile.vue
+├── assets/
+│   ├── css/         # Global styles
+│   ├── logo/        # Site logo and hero images
+│   ├── teachers/    # Staff photos
+│   └── centers/     # Program photos
 ├── public/          # Static assets
 └── nuxt.config.ts   # Nuxt configuration
 ```
 
 ## Technology Stack
 
-- **Framework**: Nuxt 3
+- **Framework**: Nuxt 4
 - **Styling**: Tailwind CSS
-- **Email**: Nodemailer
 - **Deployment**: Vercel
 - **Language**: TypeScript/Vue 3
