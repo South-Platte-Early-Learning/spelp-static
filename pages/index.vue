@@ -127,7 +127,7 @@ const centersData = [
 ]
 
 useSeoMeta({
-  title: 'South Platte Early Learning Programs | Preschool and Childcare',
+  title: 'SPELP - Home',
   description: 'South Platte Early Learning Programs provide preschool and childcare services to children in Deuel County, Keith County, and the surrounding area.',
   ogTitle: 'South Platte Early Learning Programs',
   ogDescription: 'Preschool and childcare services in Deuel County, Keith County, and surrounding communities.',

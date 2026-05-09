@@ -36,7 +36,10 @@ useHead({
     { name: 'viewport', content: 'width=device-width, initial-scale=1' }
   ],
   link: [
-    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    { rel: 'icon', type: 'image/png', href: '/images/logo.png', sizes: 'any' },
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: '32x32' },
+    { rel: 'shortcut icon', href: '/favicon.ico' },
+    { rel: 'apple-touch-icon', href: '/images/logo.png' }
   ]
 })
 </script>

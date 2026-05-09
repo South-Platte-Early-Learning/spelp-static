@@ -12,6 +12,10 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap'
   ],
 
+  site: {
+    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://spearlylearning.org'
+  },
+
   runtimeConfig: {
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://spearlylearning.org'
@@ -36,7 +40,10 @@ export default defineNuxtConfig({
         { name: 'description', content: 'South Platte Early Learning Programs provide preschool and childcare services in Deuel County, Keith County, and surrounding communities.' }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+        { rel: 'icon', type: 'image/png', href: '/images/logo.png', sizes: 'any' },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: '32x32' },
+        { rel: 'shortcut icon', href: '/favicon.ico' },
+        { rel: 'apple-touch-icon', href: '/images/logo.png' }
       ]
     }
   },

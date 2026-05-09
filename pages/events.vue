@@ -22,7 +22,7 @@ const siteUrl = runtimeConfig.public.siteUrl.replace(/\/$/, '')
 const canonicalUrl = `${siteUrl}${route.path}`
 
 useSeoMeta({
-  title: 'Events Calendar | South Platte Early Learning Programs',
+  title: 'SPELP - Events Calendar',
   description: 'View upcoming events and activities for South Platte Early Learning Programs.',
   ogTitle: 'Events Calendar | South Platte Early Learning Programs',
   ogDescription: 'Stay up to date with events and activities at South Platte Early Learning Programs.',
