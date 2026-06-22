@@ -119,7 +119,7 @@ const centersData = [
     header: 'Childcare',
     body: [
       'Our childcare program is located in the United Methodist Church of Big Springs. We are thankful to the generosity of this local church community to allow our program to operate within their building; it provides a wonderful space for children to grow.',
-      'South Platte Childcare operates year round providing a safe and loving environment for children as young as 6 weeks old through 13 years. Leslie Eskew is our primary care provider there and is assisted as needed by Sheryl Marquez.',
+      'South Platte Childcare operates year round providing a safe and loving environment for children as young as 6 weeks old through 13 years. Chynna Bonander and Jaqui Ornelas are our primary care provider there.',
       "A day at our childcare consists of plenty of love and laughter while engaging in crafts, exploration, outdoor time (to include many walks around the neighborhood) and don't forget the ever important breakfast, lunch, snacks and naps!!"
     ],
     image_url: daycarePhoto
